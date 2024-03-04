@@ -1,11 +1,15 @@
-function Article({ post }) {
-    return (
-      <article>
-        <h3>{post.title}</h3>
-        <small>{post.date}</small>
-        <p>{post.preview}</p>
-      </article>
-    )
-  }
-  
-  export default Article
+import React from 'react';
+
+const Article = (props) => {
+  const formattedDate = props.date || 'January 1, 1970';
+
+  return (
+    <article>
+      <h3>{props.title}</h3>
+      <small>{formattedDate}</small>
+      <p>{props.preview}</p>
+    </article>
+  );
+}
+
+export default Article;
